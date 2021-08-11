@@ -1,0 +1,25 @@
+name: Build Library
+
+on:
+  push:
+    branches: [ master, dev ]
+  pull_request:
+    branches: [ master, dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint
+        run: npm lint
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: npm build
