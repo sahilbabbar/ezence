@@ -14,12 +14,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: 14.15.4
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Lint project
         run: npm run lint
   
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: 14.15.4
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build project
         run: npm run build
