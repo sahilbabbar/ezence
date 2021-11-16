@@ -1,0 +1,12 @@
+/// Layout Styles
+
+@import '../color-scheme';
+@import '../iconography';
+@import '../typography';
+
+
+body {
+    background-color: $color-pri-white;
+    @include typography();
+    margin: 0;
+}

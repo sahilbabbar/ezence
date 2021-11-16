@@ -1,15 +1,8 @@
 import {NgModule} from '@angular/core';
-import {EzenceComponent} from './ezence.component';
-
 
 @NgModule({
-    declarations: [
-        EzenceComponent
-    ],
+    declarations: [],
     imports: [],
-    exports: [
-        EzenceComponent
-    ]
+    exports: []
 })
-export class EzenceModule {
-}
+export class EzenceModule {}

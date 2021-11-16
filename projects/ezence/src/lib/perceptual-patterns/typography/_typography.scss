@@ -1,0 +1,52 @@
+/// Typography Styles
+
+$font-primary: 'Inter', sans-serif;
+$font-mono: monospace; // TODO: decide mono font
+
+@mixin typography($type) {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+
+    @if $type == huge {
+        font-size: 75px;
+        letter-spacing: -7%;
+    } @else if $type == h1 {
+        font-size: 56px;
+        letter-spacing: -5%;
+    } @else if $type == h2 {
+        font-size: 42px;
+        letter-spacing: -3%;
+    } @else if $type == h3 {
+        font-size: 32px;
+        letter-spacing: -3%;
+    } @else if $type == h4 {
+        font-size: 22px;
+    } @else if $type == small {
+        font-size: 11px;
+    } @else {
+        font-size: 18px;
+    }
+}
+
+/// Elements
+h1 {
+    @include typography(h1);
+}
+
+h2 {
+    @include typography(h2);
+}
+
+h3 {
+    @include typography(h3);
+}
+
+h4 {
+    @include typography(h4);
+}
+
+small {
+    @include typography(small);
+}
+
+
