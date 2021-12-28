@@ -1,0 +1,28 @@
+<!--TODO: use semantic html elements-->
+<!--TODO: make reusable css margin/padding classes-->
+
+<main>
+    <article>
+        <header>
+            <h1 class='heading-huge color-secondary-blue'>{{ content.app.name }}</h1>
+            <h1 class='color-var-black-1'>v{{ content.app.version }}</h1>
+        </header>
+
+        <section class='width-70vw'>
+            <h3>{{ content.content[0] }}</h3>
+
+            <button>Roadmap</button>
+
+            <p>
+                Currently, Ezence is at a nascent stage and will be ready for production use by v1.0.0.<br>
+                So, everything will keep on updating here.
+            </p>
+
+            <button>Perceptual Patterns</button>
+            <button>Functional Patterns</button>
+        </section>
+
+    </article>
+</main>
+
+<ezd-ezd-footer></ezd-ezd-footer>

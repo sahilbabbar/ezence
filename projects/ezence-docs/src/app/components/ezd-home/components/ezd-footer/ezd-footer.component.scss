@@ -1,0 +1,24 @@
+@import './projects/ezence/src/lib/perceptual-patterns/color-scheme';
+
+footer { // TODO: should move to layout.scss
+    align-items: center;
+    background: $color-variant-black-2;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+
+    a { // TODO: make a new component like 'legend'
+        font-weight: 600;
+        color: unset;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $color-primary-blue;
+        }
+    }
+
+    a:nth-child(1) {
+        padding-right: 10px; // TODO: fetch from a variable, paddings/margins should be defined
+    }
+}

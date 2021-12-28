@@ -1,0 +1,35 @@
+
+// Custom Spacing Properties
+
+:root {
+    --space-unit: 1em;
+    --space-small: calc(0.75 * var(--space-unit));
+    --space-default: calc(1.25 * var(--space-unit));
+    --space-large: calc(2 * var(--space-unit));
+}
+
+@mixin margin($extent: default) {
+    @if $extent == small {
+        margin: var(--space-small);
+    } @else if $extent == large {
+        margin: var(--space-large);
+    } @else if $extent == default {
+        margin: var(--space-default)
+    }
+}
+
+@mixin padding($extent: default) {
+    @if $extent == small {
+        padding: var(--space-small);
+    } @else if $extent == large {
+        padding: var(--space-large);
+    } @else if $extent == default {
+        padding: var(--space-default)
+    }
+}
+
+.width {
+    &-70vw {
+        width: 70vw;
+    }
+}

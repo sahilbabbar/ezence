@@ -1,7 +1,8 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { ColorDirective } from './perceptual-patterns/color-scheme/directives/color.directive';
 
 @NgModule({
-    declarations: [],
+    declarations: [ColorDirective],
     imports: [],
     exports: []
 })

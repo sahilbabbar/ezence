@@ -3,27 +3,29 @@
 $font-primary: 'Inter', sans-serif;
 $font-mono: monospace; // TODO: decide mono font
 
-@mixin typography($type) {
+@mixin typography($type: body) {
+    font-family: $font-primary;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 
     @if $type == huge {
         font-size: 75px;
-        letter-spacing: -7%;
+        letter-spacing: -5px;
     } @else if $type == h1 {
         font-size: 56px;
-        letter-spacing: -5%;
+        letter-spacing: -3px;
     } @else if $type == h2 {
         font-size: 42px;
-        letter-spacing: -3%;
+        letter-spacing: -3%; // TODO: give in 'px' for following as well
     } @else if $type == h3 {
         font-size: 32px;
-        letter-spacing: -3%;
+        font-weight: 400;
+        letter-spacing: -1px;
     } @else if $type == h4 {
         font-size: 22px;
     } @else if $type == small {
         font-size: 11px;
-    } @else {
+    } @else if $type == body {
         font-size: 18px;
     }
 }
@@ -31,6 +33,10 @@ $font-mono: monospace; // TODO: decide mono font
 /// Elements
 h1 {
     @include typography(h1);
+
+    &.heading-huge {
+        @include typography(huge);
+    }
 }
 
 h2 {
@@ -49,4 +55,6 @@ small {
     @include typography(small);
 }
 
-
+p {
+    @include typography(body);
+}

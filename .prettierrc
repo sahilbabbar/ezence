@@ -1,3 +1,4 @@
+// TODO: this file is not getting picked up by prettier, instead it's picking package.json's prettier object
 {
   "extends": ["prettier"],
   "plugins": ["prettier"],
