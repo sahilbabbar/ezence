@@ -1,15 +1,11 @@
-import {NgModule} from '@angular/core';
-import {EzenceComponent} from './ezence.component';
+import { NgModule } from '@angular/core';
+import { ButtonModule } from './functional-patterns/button/button.module';
 
+const functionalPatterns = [ButtonModule];
 
 @NgModule({
-    declarations: [
-        EzenceComponent
-    ],
-    imports: [],
-    exports: [
-        EzenceComponent
-    ]
+    declarations: [],
+    imports: [functionalPatterns],
+    exports: [functionalPatterns]
 })
-export class EzenceModule {
-}
+export class EzenceModule {}

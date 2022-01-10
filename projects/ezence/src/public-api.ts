@@ -1,7 +1,5 @@
 /*
- * Public API Surface of ezence
+ * Public API Surface of Ezence Library
  */
 
-export * from './lib/ezence.service';
-export * from './lib/ezence.component';
-export * from './lib/ezence.module';
+import '../../ezence/src/lib/functional-patterns/button/button.module';

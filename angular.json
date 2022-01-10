@@ -1,163 +1,159 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
-  },
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "ezence": {
-      "projectType": "library",
-      "root": "projects/ezence",
-      "sourceRoot": "projects/ezence/src",
-      "prefix": "ez",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/ezence/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ezence/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/ezence/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ezence/src/test.ts",
-            "tsConfig": "projects/ezence/tsconfig.spec.json",
-            "karmaConfig": "projects/ezence/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/ezence/**/*.ts",
-              "projects/ezence/**/*.html"
-            ]
-          }
-        }
-      }
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "defaultCollection": "@angular-eslint/schematics"
     },
-    "ezence-docs": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
-      "root": "projects/ezence-docs",
-      "sourceRoot": "projects/ezence-docs/src",
-      "prefix": "ezd",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/ezence-docs",
-            "index": "projects/ezence-docs/src/index.html",
-            "main": "projects/ezence-docs/src/main.ts",
-            "polyfills": "projects/ezence-docs/src/polyfills.ts",
-            "tsConfig": "projects/ezence-docs/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/ezence-docs/src/favicon.ico",
-              "projects/ezence-docs/src/assets"
-            ],
-            "styles": [
-              "projects/ezence-docs/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "ezence": {
+            "projectType": "library",
+            "root": "projects/ezence",
+            "sourceRoot": "projects/ezence/src",
+            "prefix": "ez",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "project": "projects/ezence/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/ezence/tsconfig.lib.prod.json"
+                        },
+                        "development": {
+                            "tsConfig": "projects/ezence/tsconfig.lib.json"
+                        }
+                    },
+                    "defaultConfiguration": "production"
                 },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ezence/src/test.ts",
+                        "tsConfig": "projects/ezence/tsconfig.spec.json",
+                        "karmaConfig": "projects/ezence/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "projects/ezence/**/*.ts",
+                            "projects/ezence/**/*.html"
+                        ]
+                    }
                 }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "projects/ezence-docs/src/environments/environment.ts",
-                  "with": "projects/ezence-docs/src/environments/environment.prod.ts"
+            }
+        },
+        "ezence-docs": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                },
+                "@schematics/angular:application": {
+                    "strict": true
                 }
-              ],
-              "outputHashing": "all"
             },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+            "root": "projects/ezence-docs",
+            "sourceRoot": "projects/ezence-docs/src",
+            "prefix": "ezd",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/ezence-docs",
+                        "index": "projects/ezence-docs/src/index.html",
+                        "main": "projects/ezence-docs/src/main.ts",
+                        "polyfills": "projects/ezence-docs/src/polyfills.ts",
+                        "tsConfig": "projects/ezence-docs/tsconfig.app.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            "projects/ezence-docs/src/favicon.ico",
+                            "projects/ezence-docs/src/assets"
+                        ],
+                        "styles": ["projects/ezence-docs/src/styles.scss"],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "1mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/ezence-docs/src/environments/environment.ts",
+                                    "with": "projects/ezence-docs/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "ezence-docs:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "ezence-docs:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "ezence-docs:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ezence-docs/src/test.ts",
+                        "polyfills": "projects/ezence-docs/src/polyfills.ts",
+                        "tsConfig": "projects/ezence-docs/tsconfig.spec.json",
+                        "karmaConfig": "projects/ezence-docs/karma.conf.js",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            "projects/ezence-docs/src/favicon.ico",
+                            "projects/ezence-docs/src/assets"
+                        ],
+                        "styles": ["projects/ezence-docs/src/styles.scss"],
+                        "scripts": []
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "projects/ezence-docs/**/*.ts",
+                            "projects/ezence-docs/**/*.html"
+                        ]
+                    }
+                }
             }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "ezence-docs:build:production"
-            },
-            "development": {
-              "browserTarget": "ezence-docs:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ezence-docs:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ezence-docs/src/test.ts",
-            "polyfills": "projects/ezence-docs/src/polyfills.ts",
-            "tsConfig": "projects/ezence-docs/tsconfig.spec.json",
-            "karmaConfig": "projects/ezence-docs/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/ezence-docs/src/favicon.ico",
-              "projects/ezence-docs/src/assets"
-            ],
-            "styles": [
-              "projects/ezence-docs/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/ezence-docs/**/*.ts",
-              "projects/ezence-docs/**/*.html"
-            ]
-          }
         }
-      }
-    }
-  },
-  "defaultProject": "ezence"
+    },
+    "defaultProject": "ezence"
 }

@@ -1,0 +1,65 @@
+@forward 'palette';
+@import 'palette';
+
+@mixin color-primary($var: blue) {
+    @if $var == black {
+        color: $color-primary-black;
+    } @else if $var == white {
+        color: $color-primary-white;
+    } @else {
+        color: $color-primary-blue;
+    }
+}
+
+@mixin color-secondary($color: blue) {
+    @if $color == orange {
+        color: $color-secondary-orange;
+    } @else if $color == red {
+        color: $color-secondary-red;
+    } @else if $color == yellow {
+        color: $color-secondary-yellow;
+    } @else {
+        color: $color-secondary-blue;
+    }
+}
+
+.color {
+    &-primary {
+        &-blue {
+            @include color-primary();
+        }
+        &-black {
+            @include color-primary(black);
+        }
+        &-white {
+            @include color-primary(white);
+        }
+    }
+    &-secondary {
+        &-blue {
+            @include color-secondary();
+        }
+        &-orange {
+            @include color-secondary(orange);
+        }
+        &-red {
+            @include color-secondary(red);
+        }
+        &-yellow {
+            @include color-secondary(yellow);
+        }
+    }
+    &-accent {
+        color: $color-accent-blue;
+    }
+    &-var {
+        &-black {
+            &-1 {
+                color: $color-variant-black-1;
+            }
+            &-2 {
+                color: $color-variant-black-2;
+            }
+        }
+    }
+}
