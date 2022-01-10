@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { ColorDirective } from './perceptual-patterns/color-scheme/directives/color.directive';
+import { ButtonModule } from './functional-patterns/button/button.module';
+
+const functionalPatterns = [ButtonModule];
 
 @NgModule({
-    declarations: [ColorDirective],
-    imports: [],
-    exports: []
+    declarations: [],
+    imports: [functionalPatterns],
+    exports: [functionalPatterns]
 })
 export class EzenceModule {}

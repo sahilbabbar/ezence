@@ -1,6 +1,6 @@
 {
     "name": "ezence-workspace",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --port=7777",
@@ -9,7 +9,6 @@
         "test": "ng test",
         "lint": "scss-lint && ng lint"
     },
-    "private": true,
     "dependencies": {
         "@angular/animations": "~12.1.0",
         "@angular/common": "~12.1.0",

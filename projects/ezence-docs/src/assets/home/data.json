@@ -1,16 +1,16 @@
 {
     "app": {
         "name": "Ezence",
-        "version": "0.1.0"
+        "version": "0.0.1"
     },
-    "pages": [
+    "subPages": [
         "Roadmap",
         "Perceptual Patterns",
         "Functional Patterns"
     ],
     "content": [
-        "Creating a minimalistic yet more human design system that captures and reflects the essence of web design and user interaction, in a holistic way. Built using Angular.",
-        "Currently, Ezence is at a nascent stage and will be ready for production use by v1.0.0.\nSo, everything will keep on updating here."
+        "Creating a minimalistic yet more human design system that captures and reflects the essence of web design and user interaction, in a holistically simple way. Being built using Angular.",
+        "Currently, Ezence is at a nascent design-development stage and should be production ready by v1.0.0.\nSo, everything is meant to change here. If you wish to get information about all the updates, you may follow on Twitter."
     ],
     "social": [
         {
@@ -19,7 +19,7 @@
         },
         {
             "label": "GitHub",
-            "url": "https://github.com/sahilbabbarrr/ezence"
+            "url": "https://github.com/sahilbabbar/ezence"
         }
     ]
 }

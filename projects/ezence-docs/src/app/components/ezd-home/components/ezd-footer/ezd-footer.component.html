@@ -1,6 +1,6 @@
 <footer *ngIf='footerData'> <!--TODO: make footer sticky-->
     <div>
-        <strong>{{ footerData.app.name }} <span>v{{ footerData.app.version }}</span></strong>
+        {{ footerData.app.name }} <span>v{{ footerData.app.version }}</span>
     </div>
     <div>
         <ng-container *ngFor='let footerItem of footerData.social'>

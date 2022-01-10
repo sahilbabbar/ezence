@@ -1,4 +1,6 @@
 
+@import '../color-scheme';
+
 // Custom Spacing Properties
 
 :root {
@@ -25,6 +27,23 @@
         padding: var(--space-large);
     } @else if $extent == default {
         padding: var(--space-default)
+    }
+}
+
+hr {
+    border-top: 1px solid $color-variant-black-2;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+
+    &.height-medium {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    &.space-medium {
+        border: none;
+        margin-top: 10%;
     }
 }
 
