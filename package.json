@@ -1,6 +1,11 @@
 {
-    "name": "ezence-workspace",
     "version": "0.0.1",
+    "name": "ezence-workspace",
+    "description": "Ezence Design System Workspace",
+    "author": "Sahil Babbar",
+    "homepage": "https://ezence.design",
+    "license": "MIT",
+    "repository": "https://github.com/sahilbabbar/ezence",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --port=7777",

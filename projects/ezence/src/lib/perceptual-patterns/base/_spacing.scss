@@ -20,15 +20,35 @@
     }
 }
 
-@mixin padding($extent: default) {
-    @if $extent == small {
-        padding: var(--space-small);
-    } @else if $extent == large {
-        padding: var(--space-large);
-    } @else if $extent == default {
-        padding: var(--space-default)
+@mixin padding($direction: all, $extent: default) {
+    @if $direction == left {
+        @if $extent == small {
+            padding-left: var(--space-small);
+        } @else if $extent == large {
+            padding-left: var(--space-large);
+        } @else if $extent == default {
+            padding-left: var(--space-default);
+        }
+    } @else if $direction == right {
+        @if $extent == small {
+            padding-right: var(--space-small);
+        } @else if $extent == large {
+            padding-right: var(--space-large);
+        } @else if $extent == default {
+            padding-right: var(--space-default);
+        }
+    } @else if $direction == all {
+        @if $extent == small {
+            padding: var(--space-small);
+        } @else if $extent == large {
+            padding: var(--space-large);
+        } @else if $extent == default {
+            padding: var(--space-default)
+        }
     }
 }
+
+
 
 hr {
     border-top: 1px solid $color-variant-black-2;

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EzdFooterComponent } from './ezd-footer.component';
+import { EzdPatternsComponent } from './ezd-patterns.component';
 
-describe('EzdFooterComponent', () => {
-  let component: EzdFooterComponent;
-  let fixture: ComponentFixture<EzdFooterComponent>;
+describe('EzdPatternsComponent', () => {
+  let component: EzdPatternsComponent;
+  let fixture: ComponentFixture<EzdPatternsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EzdFooterComponent ]
+      declarations: [ EzdPatternsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EzdFooterComponent);
+    fixture = TestBed.createComponent(EzdPatternsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,16 @@
+<!--TODO: add support for sticky footer-->
+
+<footer *ngIf='data[0] && data[1] !== undefined; else userDefined'>
+    <div *ngFor='let left of data[0]'>
+        <a [href]='left.url' [ngClass]='left.css'>{{ left.icon }} {{ left.label }}</a>
+    </div>
+    <div *ngFor='let right of data[1]'>
+        <a [href]='right.url' [ngClass]='right.css'>{{ right.icon }} {{ right.label }}</a>
+    </div>
+</footer>
+
+<ng-template #userDefined>
+    <footer>
+        <ng-content></ng-content>
+    </footer>
+</ng-template>

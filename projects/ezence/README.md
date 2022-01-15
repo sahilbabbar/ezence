@@ -1,26 +1,29 @@
 # Ezence
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+Creating a minimalistic yet more human design system that captures and reflects the essence of web design and user interaction, in a holistically simple way. Being built using Angular.
 
-## Code scaffolding
+> Currently, Ezence is at a nascent design-development stage and should be production ready by v1.0.0. So, everything is meant to change here. If you wish to get information about all the updates, you may follow on [Twitter](https://twitter.com/sahilbabbarrr).
 
-Run `ng generate component component-name --project ezence` to generate a new component. You can also
-use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ezence`.
-> Note: Don't forget to add `--project ezence` or else it will be added to the default project in your `angular.json` file.
+------
 
-## Build
+# Installation Instructions
 
-Run `ng build ezence` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Environment
+Ezence has been tested with the following environmental dependencies and currently, only recommends using these:
+- Node.js: `16.13.1`
+- NPM: `8.1.2`
+- Angular: `12.1.5`
 
-## Publishing
+## Using Ezence
+It's pretty straight-forward to use Ezence components in your Angular app(s), using the following steps:
+1. Make sure your environment has the recommended versions of dependencies(mentioned above).
+2. Run the following command in the root of your project:
+    ```angular2html
+    npm install @ezence/components
+    ```
+3. Import in app.module.ts
+4. Import styles
 
-After building your library with `ng build ezence`, go to the dist folder `cd dist/ezence` and run `npm publish`.
+------
 
-## Running unit tests
-
-Run `ng test ezence` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out
-the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Take a look at the source code of the playground application created using Ezence for reference.
