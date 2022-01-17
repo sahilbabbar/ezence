@@ -1,0 +1,32 @@
+<!--TODO: add support for sticky footer-->
+
+<footer>
+        <div>
+            <ng-container *ngFor="let item of data">
+                <a
+                    *ngIf="item.position === 'left' || !(item.position)"
+                    [href]='item.url'
+                    [ngClass]='item.css'
+                >
+                    {{ item.icon }} {{ item.label }}
+                </a>
+                <ng-template *ngIf="item.template">
+                    <ng-content></ng-content>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div>
+            <ng-container *ngFor="let item of data">
+                <a
+                    *ngIf="item.position === 'right'"
+                    [href]='item.url'
+                    [ngClass]='item.css'
+                >
+                    {{ item.icon }} {{ item.label }}
+                </a>
+                <ng-template *ngIf="item.template">
+                    <ng-content></ng-content>
+                </ng-template>
+            </ng-container>
+        </div>
+</footer>

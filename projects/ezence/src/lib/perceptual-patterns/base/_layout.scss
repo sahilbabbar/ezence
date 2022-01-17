@@ -5,10 +5,17 @@
 @import '../iconography';
 @import '../typography';
 
+html {
+    height: 100%;
+}
+
 body {
     @include typography();
     background-color: $color-primary-white;
     color: $color-primary-black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
 }
 
@@ -24,9 +31,11 @@ header {
 }
 
 main {
+    flex: 1 0 auto;
     @include margin(large);
 }
 
 footer {
+    flex-shrink: 0;
     @include padding(large);
 }

@@ -1,5 +1,7 @@
 /// Typography Styles
 
+@import 'font-family-inter';
+
 $font-primary: 'Inter', sans-serif;
 $font-mono: monospace; // TODO: decide mono font
 
@@ -57,4 +59,14 @@ small {
 
 p {
     @include typography(body);
+}
+
+/// Reusable classes
+.text-transform {
+    &-upper {
+        text-transform: uppercase;
+    }
+    &-lower {
+        text-transform: lowercase;
+    }
 }

@@ -1,9 +1,4 @@
-import {
-    ChangeDetectionStrategy,
-    Component,
-    HostBinding,
-    OnInit
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 
 @Component({
     selector: 'button[ez-button]',
@@ -11,10 +6,8 @@ import {
     styleUrls: ['./button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
     @HostBinding('class.ez-button') cssClass = true;
 
     constructor() {}
-
-    ngOnInit() {}
 }

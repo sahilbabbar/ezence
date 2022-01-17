@@ -1,10 +1,16 @@
 {
+    "version": "0.0.2",
     "name": "ezence-workspace",
-    "version": "0.0.1",
+    "description": "Ezence Design System Workspace",
+    "author": "Sahil Babbar",
+    "homepage": "https://ezence.design",
+    "license": "MIT",
+    "repository": "https://github.com/sahilbabbar/ezence",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --port=7777",
         "build": "ng build",
+        "build:docs": "ng build --project=ezence-docs",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "lint": "scss-lint && ng lint"

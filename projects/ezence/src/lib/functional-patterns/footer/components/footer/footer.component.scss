@@ -1,11 +1,12 @@
-@import './projects/ezence/src/lib/perceptual-patterns/color-scheme';
+@import '../../../../perceptual-patterns/base/index';
 
-footer { // TODO: should move to layout.scss
+footer {
     align-items: center;
     background: $color-variant-black-2;
     display: flex;
     justify-content: space-between;
     height: 50px;
+    @include padding(all);
 
     div {
         font-weight: 500;
@@ -16,14 +17,21 @@ footer { // TODO: should move to layout.scss
         font-weight: 600;
         color: unset;
         text-decoration: none;
-        text-transform: uppercase;
 
         &:hover {
             color: $color-primary-blue;
         }
+
+        &[href=""] {
+            &:hover{
+                color: inherit;
+                cursor: inherit;
+            }
+        }
     }
 
     a:nth-child(1) {
+        @include padding(left, small);
         padding-right: 25px; // TODO: fetch from a variable, paddings/margins should be defined
     }
 }

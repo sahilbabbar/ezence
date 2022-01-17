@@ -1,6 +1,11 @@
 {
-    "name": "ezence",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "name": "@ezence/components",
+    "author": "Sahil Babbar",
+    "description": "Ezence Design System Library Project",
+    "homepage": "https://ezence.design",
+    "license": "MIT",
+    "repository": "https://github.com/sahilbabbar/ezence",
     "peerDependencies": {
         "@angular/common": "^12.1.0",
         "@angular/core": "^12.1.0"

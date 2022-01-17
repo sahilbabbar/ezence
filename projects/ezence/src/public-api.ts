@@ -3,3 +3,5 @@
  */
 
 import './lib/functional-patterns/button/button.module';
+
+import './lib/functional-patterns/footer/footer.module';
