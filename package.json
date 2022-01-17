@@ -11,6 +11,7 @@
         "start": "ng serve --port=7777",
         "build": "ng build",
         "build:docs": "ng build --project=ezence-docs",
+        "build:all": "npm run build && npm run build:docs",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "lint": "scss-lint && ng lint"
