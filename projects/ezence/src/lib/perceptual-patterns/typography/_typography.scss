@@ -60,3 +60,13 @@ small {
 p {
     @include typography(body);
 }
+
+/// Reusable classes
+.text-transform {
+    &-upper {
+        text-transform: uppercase;
+    }
+    &-lower {
+        text-transform: lowercase;
+    }
+}

@@ -6,6 +6,7 @@ footer {
     display: flex;
     justify-content: space-between;
     height: 50px;
+    @include padding(all);
 
     div {
         font-weight: 500;
@@ -16,10 +17,16 @@ footer {
         font-weight: 600;
         color: unset;
         text-decoration: none;
-        text-transform: uppercase;
 
         &:hover {
             color: $color-primary-blue;
+        }
+
+        &[href=""] {
+            &:hover{
+                color: inherit;
+                cursor: inherit;
+            }
         }
     }
 

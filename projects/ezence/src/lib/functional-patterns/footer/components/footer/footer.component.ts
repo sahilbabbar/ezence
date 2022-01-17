@@ -1,17 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EzFooterItem } from '../../utilities/footer-item.utility';
-
-export type footerData = [EzFooterItem[], EzFooterItem[]];
+import { Component, Input } from '@angular/core';
+import { EzFooterItem } from '../../models/footer-item.model';
 
 @Component({
     selector: 'ez-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-    @Input() data!: footerData;
+export class FooterComponent {
+    @Input() data!: EzFooterItem[];
 
     constructor() {}
-
-    ngOnInit(): void {}
 }
