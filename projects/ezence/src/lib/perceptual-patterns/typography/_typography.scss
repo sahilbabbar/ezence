@@ -1,6 +1,7 @@
 /// Typography Styles
 
 @import 'font-family-inter';
+@import '../color-scheme';
 
 $font-primary: 'Inter', sans-serif;
 $font-mono: monospace; // TODO: decide mono font
@@ -59,6 +60,11 @@ small {
 
 p {
     @include typography(body);
+}
+
+a {
+    color: $color-primary-blue;
+    text-decoration: none;
 }
 
 /// Reusable classes

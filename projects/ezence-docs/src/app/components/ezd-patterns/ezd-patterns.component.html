@@ -1,9 +1,20 @@
 <aside>
-    <nav>
-        <div>SB</div>
-        <div>← Back to Home</div>
-    </nav>
+    <ez-navigation [data]="navData"></ez-navigation>
 </aside>
 <main>
     <h1 class='color-primary-blue'>Patterns</h1>
+
+    <article>
+        <header>Button</header>
+        <section>
+            <button ez-button>Default</button>
+        </section>
+
+        <hr>
+
+        <header>Card</header>
+        <section>
+            <ez-card [data]="cardDemo"></ez-card>
+        </section>
+    </article>
 </main>
