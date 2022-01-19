@@ -1,0 +1,8 @@
+<div class="ez-card" [ngStyle]="data.css">
+    <div class="ez-card-heading">{{ data.heading }}</div>
+    <div class="ez-card-body" *ngIf="data.body">{{ data.body }}</div>
+    <div class="ez-card-footer">
+        <small *ngIf="data.tag">{{ data.tag }}</small>
+        <img *ngIf="data.icon" [src]="data.icon" alt="Icon">
+    </div>
+</div>

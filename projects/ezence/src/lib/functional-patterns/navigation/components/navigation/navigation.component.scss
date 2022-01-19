@@ -1,0 +1,28 @@
+@import '../../../../perceptual-patterns/base/index';
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+    .ez-nav {
+        &-brand {
+            font-weight: 600;
+            text-transform: uppercase;
+            @include typography(h4);
+        }
+
+        &-links a {
+            color: $color-variant-black-1;
+            font-size: 16px;
+            font-weight: 500; // TODO: make reusable
+            margin-left: 20px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-primary-black;
+            }
+        }
+    }
+}
