@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
     styleUrls: ['./button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent {
+export class EzButtonComponent {
     @HostBinding('class.ez-button') cssClass = true;
 
     constructor() {}

@@ -6,7 +6,6 @@ Creating a minimalistic yet more human design system that captures and reflects 
 
 > Currently, Ezence is at a nascent design-development stage and should be production ready by v1.0.0. So, everything is meant to change here. If you wish to get information about all the updates, you may follow on [Twitter](https://twitter.com/sahilbabbarrr).
 
-------
 
 # Installation Instructions
 

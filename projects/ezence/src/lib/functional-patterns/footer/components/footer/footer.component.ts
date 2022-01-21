@@ -6,7 +6,7 @@ import { EzFooterItem } from '../../models/footer-item.model';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {
+export class EzFooterComponent {
     @Input() data!: EzFooterItem[];
 
     constructor() {}

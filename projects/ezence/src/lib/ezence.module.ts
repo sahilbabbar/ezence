@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { ButtonModule } from './functional-patterns/button/button.module';
-import { FooterModule } from './functional-patterns/footer/footer.module';
+import { EzButtonModule } from './functional-patterns/button/button.module';
+import { EzFooterModule } from './functional-patterns/footer/footer.module';
 import { EzCardModule } from './functional-patterns/card/card.module';
-import { NavigationModule } from './functional-patterns/navigation/navigation.module';
+import { EzNavigationModule } from './functional-patterns/navigation/navigation.module';
 
 const functionalPatterns = [
-    ButtonModule,
-    FooterModule,
+    EzButtonModule,
+    EzFooterModule,
     EzCardModule,
-    NavigationModule
+    EzNavigationModule
 ];
 
 @NgModule({

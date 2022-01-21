@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { EzNavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
-    declarations: [NavigationComponent],
+    declarations: [EzNavigationComponent],
     imports: [CommonModule],
-    exports: [NavigationComponent]
+    exports: [EzNavigationComponent]
 })
-export class NavigationModule {}
+export class EzNavigationModule {}

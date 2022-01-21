@@ -6,7 +6,7 @@ import { EzNavigation } from '../../models/navigation.model';
     templateUrl: './navigation.component.html',
     styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class EzNavigationComponent implements OnInit {
     @Input() data!: EzNavigation;
 
     constructor() {}
