@@ -3,5 +3,6 @@
     "dest": "../../dist/ezence",
     "lib": {
         "entryFile": "src/public-api.ts"
-    }
+    },
+    "assets": ["./src/lib/perceptual-patterns"]
 }

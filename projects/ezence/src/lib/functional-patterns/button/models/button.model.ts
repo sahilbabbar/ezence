@@ -1,4 +1,4 @@
-type EzButtonType = 'default' | 'filled' | 'outline' | 'bare';
+export type EzButtonType = 'default' | 'filled' | 'outline' | 'icon';
 
 export interface EzButton {
     label: string;

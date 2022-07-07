@@ -1,5 +1,5 @@
 {
-    "version": "0.0.3",
+    "version": "0.0.4",
     "name": "ezence-workspace",
     "description": "Ezence Design System Workspace",
     "author": "Sahil Babbar",
@@ -7,14 +7,14 @@
     "license": "MIT",
     "repository": "https://github.com/sahilbabbar/ezence",
     "scripts": {
-        "ng": "ng",
         "start": "ng serve --port=7777",
+        "watch": "ng build --watch --configuration development",
+        "test": "ng test",
+        "lint": "scss-lint && ng lint",
         "build": "ng build",
         "build:docs": "ng build --project=ezence-docs",
         "build:all": "npm run build && npm run build:docs",
-        "watch": "ng build --watch --configuration development",
-        "test": "ng test",
-        "lint": "scss-lint && ng lint"
+        "publish": "cd dist/ezence && npm publish"
     },
     "dependencies": {
         "@angular/animations": "~12.1.0",

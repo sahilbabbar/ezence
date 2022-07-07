@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { EzdHomeComponent } from './components/ezd-home/ezd-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EzenceModule } from '../../../ezence/src/lib/ezence.module';
-import { EzdPatternsComponent } from './components/ezd-patterns/ezd-patterns.component';
+import { EzdFunctionalPatternsComponent } from './components/ezd-functional-patterns/ezd-functional-patterns.component';
+import { EzdPerceptualPatternsComponent } from './components/ezd-perceptual-patterns/ezd-perceptual-patterns.component';
 
 @NgModule({
-    declarations: [AppComponent, EzdHomeComponent, EzdPatternsComponent],
+    declarations: [
+        AppComponent,
+        EzdHomeComponent,
+        EzdFunctionalPatternsComponent,
+        EzdPerceptualPatternsComponent
+    ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, EzenceModule],
     providers: [],
     bootstrap: [AppComponent]

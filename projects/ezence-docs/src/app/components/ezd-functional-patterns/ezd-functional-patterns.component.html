@@ -1,0 +1,44 @@
+<aside>
+    <ez-navigation [data]="navData"></ez-navigation>
+</aside>
+<main>
+    <h1>Functional Patterns</h1>
+    <p class='margin-top-small margin-bottom-large'>
+        Patterns that give function to the design system.
+    </p>
+    <article>
+        <header>Button</header>
+        <section>
+            <p>
+                Button can be of two types - <code>default</code>, <code>outline</code>.
+            </p>
+            <div class='ezd-pattern-example'>
+                <button ez-button class='margin-right-small'>Default</button>
+                <button ez-button class='ez-button-outline'>Outline</button>
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Card</header>
+        <section>
+            <p>
+                Card has take various forms depending on the elements inside it. Following
+                card has all the elements.
+            </p>
+            <div class='ezd-pattern-example'>
+                <ez-card [data]='cardDemo'></ez-card>
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Navigation</header>
+        <section>
+            <p>
+                Navigation bar
+            </p>
+            <div class='ezd-pattern-example'>
+                <ez-navigation [data]='navDataDemo' class='width-70vw'></ez-navigation>
+            </div>
+        </section>
+    </article>
+</main>

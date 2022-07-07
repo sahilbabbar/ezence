@@ -6,6 +6,10 @@
 @import '../iconography';
 @import '../typography';
 
+@mixin border-radius {
+    border-radius: 3px;
+}
+
 html {
     height: 100%;
 }
@@ -20,9 +24,15 @@ body {
     margin: 0;
 }
 
-
 article {
-    @include margin();
+
+    @include margin(all, large);
+
+    header {
+        color: $color-primary-blue;
+        @include margin(bottom, small);
+        @include typography(h4);
+    }
 }
 
 header {
@@ -32,8 +42,8 @@ header {
 }
 
 main {
-    flex: 1 0 auto;
-    @include margin(large);
+    flex: 1 0 auto; // <- TODO: Just for sticky footer
+    @include margin(all, large);
 }
 
 footer {

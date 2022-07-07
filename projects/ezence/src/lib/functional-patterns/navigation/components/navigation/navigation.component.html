@@ -1,10 +1,19 @@
 <nav>
-    <div class="ez-nav-brand">
+    <div class="ez-nav-brand" #navBrand>
         <a [href]="data.brand.href">{{ data.brand.label }}</a>
     </div>
-    <div class="ez-nav-links">
+    <div class="ez-nav-links" #navLinks>
         <ng-container *ngFor="let link of data.links">
             <a [href]="link.href">{{ link.label }}</a>
         </ng-container>
     </div>
+    <button ez-button *ngIf='responsive' (click)='toggleLinksMenu()'>
+        Menu
+    </button>
 </nav>
+
+<div class='ez-nav-links-menu' *ngIf='showLinksMenu'> <!-- TODO: why does [hidden] not work here-->
+    <ng-container *ngFor="let link of data.links">
+        <a [href]="link.href">{{ link.label }}</a>
+    </ng-container>
+</div>

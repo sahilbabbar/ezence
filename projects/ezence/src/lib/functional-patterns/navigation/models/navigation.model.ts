@@ -6,5 +6,6 @@ export class EzNavigation {
     links?: {
         label: string;
         href?: string;
+        icon?: string; // TODO: Make & use Icon type
     }[];
 }

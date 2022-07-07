@@ -1,8 +1,6 @@
-
 @import '../color-scheme';
 
-// Custom Spacing Properties
-
+// Spacing Variables
 :root {
     --space-unit: 1em;
     --space-small: calc(0.75 * var(--space-unit));
@@ -10,16 +8,100 @@
     --space-large: calc(2 * var(--space-unit));
 }
 
-@mixin margin($extent: default) {
-    @if $extent == small {
-        margin: var(--space-small);
-    } @else if $extent == large {
-        margin: var(--space-large);
-    } @else if $extent == default {
-        margin: var(--space-default)
+// Margins
+@mixin margin($direction: all, $extent: default) {
+    @if $direction == left {
+        @if $extent == small {
+            margin-left: var(--space-small);
+        } @else if $extent == large {
+            margin-left: var(--space-large);
+        } @else if $extent == default {
+            margin-left: var(--space-default)
+        }
+    } @else if $direction == top {
+        @if $extent == small {
+            margin-top: var(--space-small);
+        } @else if $extent == large {
+            margin-top: var(--space-large);
+        } @else if $extent == default {
+            margin-top: var(--space-default)
+        }
+    } @else if $direction == right {
+        @if $extent == small {
+            margin-right: var(--space-small);
+        } @else if $extent == large {
+            margin-right: var(--space-large);
+        } @else if $extent == default {
+            margin-right: var(--space-default)
+        }
+    } @else if $direction == bottom {
+        @if $extent == small {
+            margin-bottom: var(--space-small);
+        } @else if $extent == large {
+            margin-bottom: var(--space-large);
+        } @else if $extent == default {
+            margin-bottom: var(--space-default)
+        }
+    } @else if $direction == all {
+        @if $extent == small {
+            margin: var(--space-small);
+        } @else if $extent == large {
+            margin: var(--space-large);
+        } @else if $extent == default {
+            margin: var(--space-default)
+        }
     }
 }
 
+.margin {
+    &-left {
+        &-default {
+            margin-left: var(--space-default);
+        }
+        &-small {
+            margin-left: var(--space-small);
+        }
+        &-large {
+            margin-left: var(--space-large);
+        }
+    }
+    &-top {
+        &-default {
+            margin-top: var(--space-default);
+        }
+        &-small {
+            margin-top: var(--space-small);
+        }
+        &-large {
+            margin-top: var(--space-large);
+        }
+    }
+    &-right {
+        &-default {
+            margin-right: var(--space-default);
+        }
+        &-small {
+            margin-right: var(--space-small);
+        }
+        &-large {
+            margin-right: var(--space-large);
+        }
+    }
+    &-bottom {
+        &-default {
+            margin-bottom: var(--space-default);
+        }
+        &-small {
+            margin-bottom: var(--space-small);
+        }
+        &-large {
+            margin-bottom: var(--space-large);
+        }
+
+    }
+}
+
+// Paddings
 @mixin padding($direction: all, $extent: default) {
     @if $direction == left {
         @if $extent == small {
@@ -48,23 +130,12 @@
     }
 }
 
-
-
+// Divider
 hr {
     border-top: 1px solid $color-variant-black-2;
     border-bottom: none;
     border-left: none;
     border-right: none;
-
-    &.height-medium {
-        margin-top: 10%;
-        margin-bottom: 5%;
-    }
-
-    &.space-medium {
-        border: none;
-        margin-top: 10%;
-    }
 }
 
 .width {

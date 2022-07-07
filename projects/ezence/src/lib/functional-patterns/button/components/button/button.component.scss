@@ -1,16 +1,17 @@
 @import '../../../../perceptual-patterns/base/index';
 
 @mixin ezButton {
-    border-radius: 3px; // TODO: make reusable
     box-shadow: 0px 0px 10px $color-variant-black-1;
     cursor: pointer;
+    display: flex;
     font-family: $font-primary;
     font-size: 18px;
     padding: 10px 25px;
     transition: box-shadow 0.5s;
+    @include border-radius;
 }
 
-:host {
+@mixin ez-button-base {
     background: $color-secondary-blue;
     border: none;
     color: $color-primary-white;
@@ -26,11 +27,14 @@
     }
 }
 
-.ez-button { // TODO: this is not visible outside due to encapsulation
+.ez-button {
+
+    @include ez-button-base;
+
     &-outline {
         background: $color-primary-white;
         border: 1px solid $color-secondary-blue;
-        color: $color-primary-black;
+        color: $color-secondary-blue;
         @include ezButton;
     }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EzdHomeService } from './services/ezd-home.service';
 import { EzdHomeModel } from './utilities/homeModel.utility';
 import { EzFooterItem } from '../../../../../ezence/src/lib/functional-patterns/footer/models/footer-item.model';
+import { EzNavigation } from '../../../../../ezence/src/lib/functional-patterns/navigation/models/navigation.model';
 
 @Component({
     selector: 'ezd-home',
@@ -11,6 +12,8 @@ import { EzFooterItem } from '../../../../../ezence/src/lib/functional-patterns/
 export class EzdHomeComponent implements OnInit {
     homeData!: EzdHomeModel; // TODO: now footer and home are both getting redundant data, rather it should get only specific keys
 
+    navbarData!: EzNavigation;
+
     footerData!: EzFooterItem[];
 
     constructor(private homeService: EzdHomeService) {}
@@ -18,6 +21,14 @@ export class EzdHomeComponent implements OnInit {
     ngOnInit(): void {
         this.homeService.fetchHomeData().subscribe((data) => {
             this.homeData = data;
+            console.log(this.homeData);
+            this.navbarData = {
+                brand: {
+                    label: data.app.name,
+                    href: ''
+                },
+                links: data.pages
+            };
             this.footerData = [
                 {
                     label:
@@ -28,13 +39,13 @@ export class EzdHomeComponent implements OnInit {
                 {
                     label: 'Twitter',
                     url: 'https://twitter.com/sahilbabbarrr',
-                    css: 'text-transform-upper', // TODO: use BEM
+                    css: '', // TODO: use BEM
                     position: 'right'
                 },
                 {
-                    label: 'Github',
+                    label: 'GitHub',
                     url: 'https://github.com/sahilbabbar/ezence',
-                    css: 'text-transform-upper',
+                    css: '',
                     position: 'right'
                 }
             ];
