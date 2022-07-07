@@ -4,6 +4,7 @@ footer {
     align-items: center;
     background: $color-variant-black-2;
     display: flex;
+    font-size: 16px;
     justify-content: space-between;
     height: 50px;
     @include padding(all);
@@ -13,7 +14,6 @@ footer {
     }
 
     a { // TODO: make a new component like 'legend'
-        font-size: 14px;
         font-weight: 600;
         color: unset;
         text-decoration: none;

@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 
 @import './projects/ezence/src/lib/perceptual-patterns/base';
 
@@ -11,5 +10,23 @@ ezd {
         display: flex;
         flex-direction: column;
         height: 100%;
+    }
+}
+
+// TODO: the below styles should only apply to docs or
+// they can be included in component styles?
+main {
+    margin-bottom: 10%;
+}
+
+article {
+    @include margin(bottom, xlarge);
+}
+
+.ezd-pattern {
+    &-example {
+        display: flex;
+        @include margin(top, small);
+        @include margin(bottom, small);
     }
 }

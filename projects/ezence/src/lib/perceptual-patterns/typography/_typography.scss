@@ -1,10 +1,11 @@
 /// Typography Styles
 
 @import 'font-family-inter';
+@import 'font-family-fira-code';
 @import '../color-scheme';
 
 $font-primary: 'Inter', sans-serif;
-$font-mono: monospace; // TODO: decide mono font
+$font-mono: 'Fira Code', monospace;
 
 @mixin typography($type: body) {
     font-family: $font-primary;
@@ -30,10 +31,17 @@ $font-mono: monospace; // TODO: decide mono font
         font-size: 11px;
     } @else if $type == body {
         font-size: 18px;
+    } @else {
+        font-size: 18px;
     }
 }
 
 /// Elements
+code {
+    color: $color-secondary-blue;
+    font-family: $font-mono;
+}
+
 h1 {
     @include typography(h1);
 

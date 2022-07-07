@@ -1,13 +1,19 @@
 export class EzdHomeModel {
     app!: App;
-    pages: any;
+    pages!: Page[];
     content: any;
     social: any;
 }
 
 export class App {
     name!: string;
-    version!: string;
+    version!: number;
+    license!: string;
+}
+
+export class Page {
+    label!: string;
+    href!: string;
 }
 
 export class Social {}

@@ -3,10 +3,15 @@
         "name": "Ezence",
         "version": "0.0.3"
     },
-    "subPages": [
-        "Roadmap",
-        "Perceptual Patterns",
-        "Functional Patterns"
+    "pages": [
+        {
+            "label": "Functional Patterns",
+            "href": "functional-patterns"
+        },
+        {
+            "label": "Perceptual Patterns",
+            "href": "perceptual-patterns"
+        }
     ],
     "content": [
         "Creating a minimalistic yet more human design system that captures and reflects the essence of web design and user interaction, in a holistically simple way. Being built using Angular.",

@@ -28,4 +28,3 @@ It's pretty straight-forward to use Ezence components in your Angular app(s), us
 [comment]: <> (------)
 
 [comment]: <> (Take a look at the source code of the playground application created using Ezence for reference.)
-

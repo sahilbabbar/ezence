@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EzdHomeComponent } from './components/ezd-home/ezd-home.component';
-import { EzdPatternsComponent } from './components/ezd-patterns/ezd-patterns.component';
+import { EzdFunctionalPatternsComponent } from './components/ezd-functional-patterns/ezd-functional-patterns.component';
+import { EzdPerceptualPatternsComponent } from './components/ezd-perceptual-patterns/ezd-perceptual-patterns.component';
 
 const routes: Routes = [
     {
@@ -9,8 +10,12 @@ const routes: Routes = [
         component: EzdHomeComponent
     },
     {
-        path: 'patterns',
-        component: EzdPatternsComponent
+        path: 'functional-patterns',
+        component: EzdFunctionalPatternsComponent
+    },
+    {
+        path: 'perceptual-patterns',
+        component: EzdPerceptualPatternsComponent
     },
     {
         path: '**',
