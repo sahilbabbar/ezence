@@ -10,6 +10,15 @@
         color: $color-primary-blue;
     }
 }
+@mixin bg-color-primary($var: blue) {
+    @if $var == black {
+        background-color: $color-primary-black;
+    } @else if $var == white {
+        background-color: $color-primary-white;
+    } @else {
+        background-color: $color-primary-blue;
+    }
+}
 
 @mixin color-secondary($color: blue) {
     @if $color == orange {
@@ -20,6 +29,18 @@
         color: $color-secondary-yellow;
     } @else {
         color: $color-secondary-blue;
+    }
+}
+
+@mixin bg-color-secondary($color: blue) {
+    @if $color == orange {
+        background-color: $color-secondary-orange;
+    } @else if $color == red {
+        background-color: $color-secondary-red;
+    } @else if $color == yellow {
+        background-color: $color-secondary-yellow;
+    } @else {
+        background-color: $color-secondary-blue;
     }
 }
 
@@ -59,6 +80,47 @@
             }
             &-2 {
                 color: $color-variant-black-2;
+            }
+        }
+    }
+}
+
+.bg-color {
+    &-primary {
+        &-blue {
+            @include bg-color-primary();
+        }
+        &-black {
+            @include bg-color-primary(black);
+        }
+        &-white {
+            @include bg-color-primary(white);
+        }
+    }
+    &-secondary {
+        &-blue {
+            @include bg-color-secondary();
+        }
+        &-orange {
+            @include bg-color-secondary(orange);
+        }
+        &-red {
+            @include bg-color-secondary(red);
+        }
+        &-yellow {
+            @include bg-color-secondary(yellow);
+        }
+    }
+    &-accent {
+        background-color: $color-accent-blue;
+    }
+    &-var {
+        &-black {
+            &-1 {
+                background-color: $color-variant-black-1;
+            }
+            &-2 {
+                background-color: $color-variant-black-2;
             }
         }
     }

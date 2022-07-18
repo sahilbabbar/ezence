@@ -6,6 +6,7 @@
     display: flex;
     font-family: $font-primary;
     font-size: 18px;
+    justify-content: center;
     padding: 10px 25px;
     transition: box-shadow 0.5s;
     @include border-radius;

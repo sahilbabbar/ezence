@@ -1,0 +1,41 @@
+form {
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        @include margin(bottom, default);
+    }
+
+    legend {
+        color: $color-variant-black-1;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        @include margin(bottom, default);
+        @include typography(small);
+    }
+
+    label {
+        @include margin(bottom, small);
+    }
+
+    input, textarea {
+        border: 1px solid $color-variant-black-2; // <- TODO: convert into reusable(used in card, image, input)
+        font-family: inherit;
+        max-width: 250px; // TODO: are these max/min widths correct?
+        min-width: 150px;
+        transition: border 0.5s;
+
+        @include border-radius;
+        @include padding(all, small);
+        @include typography(body);
+
+        &:focus-visible {
+            border: 1px solid $color-primary-blue;
+        }
+
+        &:hover {
+            border: 1px solid $color-primary-black;
+        }
+    }
+}

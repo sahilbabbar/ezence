@@ -1,7 +1,6 @@
 export class EzdHomeModel {
     app!: App;
     pages!: Page[];
-    content: any;
     social: any;
 }
 
@@ -15,5 +14,3 @@ export class Page {
     label!: string;
     href!: string;
 }
-
-export class Social {}

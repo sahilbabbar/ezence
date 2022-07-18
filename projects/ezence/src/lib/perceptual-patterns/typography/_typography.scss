@@ -66,6 +66,10 @@ small {
     @include typography(small);
 }
 
+strong {
+    font-weight: bold;
+}
+
 p {
     @include typography(body);
 }

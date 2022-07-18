@@ -1,6 +1,4 @@
 <ng-container *ngIf='homeData'>
-    <ez-navigation [data]='navbarData'></ez-navigation>
-
     <main>
         <article>
             <header>
@@ -9,14 +7,32 @@
             </header>
 
             <section class='width-70vw'>
-                <h3 class='margin-top-small'>{{ homeData.content[0] }}</h3>
-                <p class='margin-top-default'>{{ homeData.content[1] }}</p>
+                <h3 class='margin-top-small'>
+                    This design system project is an effort to capture the essence of a
+                    software's user experience & eliminating the noise from the music.
+                </h3>
+                <p class='margin-top-default'>
+                    Ezence is intended to be a minimalistic, straightforward and no-frills
+                    design system, that has quick but meaningful user interactions for both
+                    the web and mobile platforms. Currently, Ezence is at a nascent design/development stage and is forecasted
+                    to be production ready by <code>v1.0.0</code>. So, everything is meant to
+                    change here, rampantly.
+                    <br><br>
+                    If you wish to get information about all the updates, you may follow on Twitter
+                    or get an email for every new release by subscribing below.
+                </p>
+                <form name='newsletter-form' action='/submit' method='post' autocomplete='off'>
+                    <fieldset>
+                        <input name='email' type='email' placeholder='email@domain.com' required>
+                    </fieldset>
+                    <button ez-button name='form-button' type='submit'>Subscribe</button>
+                </form>
             </section>
+
+<!--            <h3>About</h3>-->
 
         </article>
     </main>
-
-    <ez-footer [data]='footerData'></ez-footer>
 
 </ng-container>
 

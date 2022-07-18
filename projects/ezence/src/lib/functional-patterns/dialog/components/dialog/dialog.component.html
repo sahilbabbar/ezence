@@ -1,0 +1,17 @@
+<article>
+    <header>{{ data.heading }}</header>
+    <p>
+        {{ data.content }}
+    </p>
+    <footer>
+        <button ez-button class='ez-button-outline' (click)='close()'>Close</button>
+
+        <ng-container *ngIf='data.actions'>
+            <ng-container *ngFor='let action of data.actions'>
+                <button ez-button>{{ action.label }}</button>
+            </ng-container>
+        </ng-container>
+
+    </footer>
+</article>
+

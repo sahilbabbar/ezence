@@ -1,5 +1,9 @@
 @import '../../../../perceptual-patterns/base/index';
 
+:host {
+    width: 100%;
+}
+
 footer {
     align-items: center;
     background: $color-variant-black-2;

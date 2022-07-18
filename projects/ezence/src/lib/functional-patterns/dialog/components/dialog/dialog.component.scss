@@ -1,0 +1,44 @@
+@import '../../../../perceptual-patterns/base/index';
+
+ez-dialog { // TODO: why :host not working here
+    background: $color-primary-white;
+    border: 1px solid $color-primary-blue;
+    bottom: 1vh;
+    box-shadow: 0px 0px 5px $color-variant-black-2;
+    display: flex;
+    flex-direction: column;
+    left: calc((100vw - 90vw)/2);
+    min-width: 90vw;
+    right: calc((100vw - 90vw)/2);
+    position: fixed;
+    z-index: 99; // TODO: make a standard guideline for z-index & make mixins accordingly
+
+    @include border-radius;
+
+    article {
+        @include margin(all, large);
+    }
+
+    header {
+        color: $color-primary-black !important;
+        margin-bottom: 20px;
+
+        @include typography(h4);
+    }
+
+    footer {
+        button {
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        @include margin(top, large);
+    }
+}
+
+.ez-dialog {
+    &-hidden {
+        display: none;
+    }
+}

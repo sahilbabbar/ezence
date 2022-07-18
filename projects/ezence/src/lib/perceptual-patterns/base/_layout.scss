@@ -42,11 +42,33 @@ header {
 }
 
 main {
+    display: flex;
     flex: 1 0 auto; // <- TODO: Just for sticky footer
+    flex-direction: column;
     @include margin(all, large);
 }
 
 footer {
     flex-shrink: 0;
     @include padding(large);
+}
+
+
+@mixin flex($direction: column) {
+    display: flex;
+
+    @if $direction == column {
+        flex-direction: column;
+    } @else if $direction == row {
+        flex-direction: row;
+    } @else {
+        flex-direction: column;
+    }
+}
+
+.flex {
+    @include flex;
+    &-row {
+        @include flex(row);
+    }
 }

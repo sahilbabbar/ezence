@@ -2,7 +2,7 @@
 
 // Spacing Variables
 :root {
-    --space-unit: 1em;
+    --space-unit: 1rem;
     --space-small: calc(0.75 * var(--space-unit));
     --space-default: calc(1.25 * var(--space-unit));
     --space-large: calc(2 * var(--space-unit));
@@ -136,6 +136,8 @@ hr {
     border-bottom: none;
     border-left: none;
     border-right: none;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .width {

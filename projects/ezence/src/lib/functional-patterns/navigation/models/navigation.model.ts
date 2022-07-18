@@ -2,6 +2,7 @@ export class EzNavigation {
     brand!: {
         label: string;
         href?: string;
+        image?: string;
     };
     links?: {
         label: string;
