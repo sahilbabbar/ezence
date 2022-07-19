@@ -77,6 +77,10 @@ p {
 a {
     color: $color-primary-blue;
     text-decoration: none;
+
+    //&:hover { // TODO: add hover effect for anchor
+    //    border-bottom: 1px dashed $color-variant-black-1;
+    //}
 }
 
 /// Reusable classes
