@@ -33,15 +33,18 @@ export class AppComponent implements OnInit {
                         data.app.version
                 },
                 {
-                    label: 'Twitter',
+                    label: data.app.licenseInfo,
+                    position: 'left',
+                    css: 'margin-top-small color-var-black-1-imp' // TODO: use BEM
+                },
+                {
+                    icon: 'twitter',
                     url: 'https://twitter.com/sahilbabbarrr',
-                    css: '', // TODO: use BEM
                     position: 'right'
                 },
                 {
-                    label: 'GitHub',
+                    icon: 'github',
                     url: 'https://github.com/sahilbabbar/ezence',
-                    css: '',
                     position: 'right'
                 }
             ];

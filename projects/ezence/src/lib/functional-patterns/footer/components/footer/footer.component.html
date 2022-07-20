@@ -1,28 +1,41 @@
-<!--TODO: add support for sticky footer-->
+<!--TODO: add support for sticky footer & refactor following code-->
 
 <footer>
-        <div>
-            <ng-container *ngFor="let item of data">
-                <a
-                    *ngIf="item.position === 'left' || !(item.position)"
-                    [href]='item.url'
-                    [ngClass]='item.css'
-                >
-                    {{ item.icon }} {{ item.label }}
-                </a>
+        <div class='flex flex-column'>
+            <ng-container *ngFor="let item of data" [ngSwitch]='item.url'>
+                <ng-container *ngSwitchCase='!undefined'>
+                    <a
+                        *ngIf="item.position === 'left' || !(item.position)"
+                        [href]='item.url'
+                        [ngClass]='item.css'
+                        target='_blank'
+                    >
+                        <i *ngIf='item.icon' [class]='"icon icon-" + item.icon'></i> {{ item.label }}
+                    </a>
+                </ng-container>
+                <ng-container *ngSwitchCase='undefined'>
+                    <div
+                        *ngIf="item.position === 'left' || !(item.position)"
+                        [ngClass]='item.css'
+                    >
+                        <i *ngIf='item.icon' [class]='"icon icon-" + item.icon'></i> {{ item.label }}
+                    </div>
+                </ng-container>
+
                 <ng-template *ngIf="item.template">
                     <ng-content></ng-content>
                 </ng-template>
             </ng-container>
         </div>
-        <div>
+        <div class='flex flex-row'>
             <ng-container *ngFor="let item of data">
                 <a
                     *ngIf="item.position === 'right'"
                     [href]='item.url'
                     [ngClass]='item.css'
+                    target='_blank'
                 >
-                    {{ item.icon }} {{ item.label }}
+                    <i *ngIf='item.icon' [class]='"icon icon-" + item.icon'></i> {{ item.label }}
                 </a>
                 <ng-template *ngIf="item.template">
                     <ng-content></ng-content>

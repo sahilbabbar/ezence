@@ -77,6 +77,10 @@
         &-black {
             &-1 {
                 color: $color-variant-black-1;
+
+                &-imp {
+                    color: $color-variant-black-1 !important; // TODO: quickfix, as cannot overide color
+                }
             }
             &-2 {
                 color: $color-variant-black-2;

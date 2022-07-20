@@ -6,16 +6,23 @@ i {
     height: 24px;
     width: 24px;
 }
-.icon-add {
-    background-image: url('icons/add.svg');
-    &-outline {
-        background-image: url('icons/add-outline.svg');
+.icon{
+    &-add {
+        background-image: url('icons/add.svg');
+        &-outline {
+            background-image: url('icons/add-outline.svg');
+        }
+        &-sharp {
+            background-image: url('icons/add-sharp.svg');
+        }
     }
-    &-sharp {
-        background-image: url('icons/add-sharp.svg');
-    }
-}
 
-.icon-twitter {
-    background-image: url('icons/logo-twitter.svg');
+    &-twitter {
+        background-image: url('icons/logo-twitter.svg');
+    }
+
+    &-github {
+        background-image: url('icons/logo-github.svg');
+    }
+
 }

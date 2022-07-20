@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EzdHomeService } from './services/ezd-home.service';
-import { EzdHomeModel } from './utilities/homeModel.utility';
+import { EzdHomeModel } from './models/home.model';
 
 @Component({
     selector: 'ezd-home',

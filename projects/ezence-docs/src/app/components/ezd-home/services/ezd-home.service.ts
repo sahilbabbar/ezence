@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EzdHomeModel } from '../utilities/homeModel.utility';
+import { EzdHomeModel } from '../models/home.model';
 
 const HOME_DATA_LOCATION = 'assets/home/data.json';
 

@@ -28,18 +28,16 @@ export class EzdFunctionalPatternsComponent implements OnInit {
     ngOnInit(): void {
         this.footerData = [
             {
-                label: 'Ezence v0.1.0'
+                label: 'Brand'
             },
             {
-                label: 'Twitter',
-                url: 'https://twitter.com/sahilbabbarrr',
-                css: '',
+                label: 'Link 1',
+                url: 'https://twitter.com',
                 position: 'right'
             },
             {
-                label: 'GitHub',
-                url: 'https://github.com/sahilbabbar/ezence',
-                css: '',
+                label: 'Link 2',
+                url: 'https://github.com',
                 position: 'right'
             }
         ];

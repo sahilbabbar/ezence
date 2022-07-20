@@ -12,6 +12,11 @@
     div[class^='bg'] {
         height: 25px;
         width: 200px;
+
+        @include respond-to('phone') {
+            width: 100px;
+        }
+
     }
 
     div {
@@ -27,5 +32,17 @@
 .even-gaps {
     * {
         @include margin(bottom, default);
+    }
+}
+
+img {
+    @include respond-to('phone') {
+        width: 100%;
+    }
+
+    &:nth-child(n+1) {
+        @include respond-to('phone') {
+            @include margin(top, default);
+        }
     }
 }

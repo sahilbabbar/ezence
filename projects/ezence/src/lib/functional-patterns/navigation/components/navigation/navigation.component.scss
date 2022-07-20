@@ -8,7 +8,12 @@ nav {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 25px;
+
+    @include padding(all, large);
+
+    @include respond-to('phone') {
+        @include padding(all, default);
+    }
 
     .ez-nav {
         &-brand {
@@ -57,10 +62,10 @@ nav {
     }
 }
 
-//@media (768px < width) {
-//
-//}
-//
+@media (768px < width) {
+
+}
+
 //@media (425px < width <= 768px) {
 //
 //}
@@ -69,6 +74,6 @@ nav {
 //
 //}
 //
-//@media (width <= 375px) {
-//
-//}
+@media (width <= 375px) {
+
+}

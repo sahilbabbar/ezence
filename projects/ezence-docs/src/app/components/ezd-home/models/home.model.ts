@@ -7,7 +7,7 @@ export class EzdHomeModel {
 export class App {
     name!: string;
     version!: number;
-    license!: string;
+    licenseInfo!: string;
 }
 
 export class Page {
