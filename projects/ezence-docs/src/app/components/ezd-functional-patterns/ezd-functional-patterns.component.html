@@ -1,6 +1,3 @@
-<aside>
-    <ez-navigation [data]="navData"></ez-navigation>
-</aside>
 <main>
     <h1>Functional Patterns</h1>
     <p class='margin-top-small margin-bottom-large'>
@@ -31,6 +28,60 @@
         </section>
     </article>
     <article>
+        <header>Form</header>
+        <section>
+            <p>
+                Form
+            </p>
+            <div class='ezd-pattern-example'>
+                <form name='demo-form' action='/submit' method='post' autocomplete='off'>
+                    <fieldset>
+                        <legend>Group of controls</legend>
+                        <label>Email Address</label>
+                        <input name='email' type='email' placeholder='me@myname.com' required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Message</label>
+                        <textarea name='message' autocomplete='off' minlength='5' maxlength='25' placeholder='Enter message here.' wrap='hard' spellcheck='false' required></textarea>
+                    </fieldset>
+                    <button ez-button name='form-button' type='submit'>Submit</button>
+                </form>
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Footer</header>
+        <section>
+            <p>Footer component</p>
+            <div class='ezd-pattern-example'>
+                <ez-footer [data]='footerData' class='width-70vw'></ez-footer>
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Loader</header>
+        <section>
+            <p>
+                Loader
+            </p>
+            <div class='ezd-pattern-example'>
+
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Dialog</header>
+        <section>
+            <p>
+                Dialog
+            </p>
+            <div class='ezd-pattern-example'>
+                <button ez-button (click)='dialog.open()'>Open Dialog</button>
+                <ez-dialog #dialog [data]='dialogData'></ez-dialog>
+            </div>
+        </section>
+    </article>
+    <article>
         <header>Navigation</header>
         <section>
             <p>
@@ -38,6 +89,18 @@
             </p>
             <div class='ezd-pattern-example'>
                 <ez-navigation [data]='navDataDemo' class='width-70vw'></ez-navigation>
+            </div>
+        </section>
+    </article>
+    <article>
+        <header>Notification</header>
+        <section>
+            <p>
+                Notification
+            </p>
+            <div class='ezd-pattern-example'>
+                <button ez-button (click)='notification.open()'>Show Notification</button>
+                <ez-notification #notification [data]='notificationData'></ez-notification>
             </div>
         </section>
     </article>

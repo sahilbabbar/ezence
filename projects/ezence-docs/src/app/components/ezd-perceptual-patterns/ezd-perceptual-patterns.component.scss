@@ -1,4 +1,48 @@
+@import '../../../../../ezence/src/lib/perceptual-patterns/base/index';
+
 :host {
     display: flex;
     flex-direction: column;
+}
+
+.ezd-pattern-color {
+
+    @include margin(top, default);
+
+    div[class^='bg'] {
+        height: 25px;
+        width: 200px;
+
+        @include respond-to('phone') {
+            width: 100px;
+        }
+
+    }
+
+    div {
+        @include margin(top, small);
+    }
+
+    .bg-color-primary-white {
+        border: 1px solid $color-variant-black-1;
+    }
+
+}
+
+.even-gaps {
+    * {
+        @include margin(bottom, default);
+    }
+}
+
+img {
+    @include respond-to('phone') {
+        width: 100%;
+    }
+
+    &:nth-child(n+1) {
+        @include respond-to('phone') {
+            @include margin(top, default);
+        }
+    }
 }

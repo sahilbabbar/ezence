@@ -1,20 +1,7 @@
 
 @import './projects/ezence/src/lib/perceptual-patterns/base';
 
-ezd {
-    &-root {
-        height: 100%;
-    }
-
-    &-home {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-}
-
-// TODO: the below styles should only apply to docs or
-// they can be included in component styles?
+// TODO: the below styles should only apply to docs or they can be included in component styles?
 main {
     margin-bottom: 10%;
 }

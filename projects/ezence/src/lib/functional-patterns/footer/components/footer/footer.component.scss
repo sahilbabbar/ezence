@@ -1,5 +1,9 @@
 @import '../../../../perceptual-patterns/base/index';
 
+:host {
+    width: 100%;
+}
+
 footer {
     align-items: center;
     background: $color-variant-black-2;
@@ -7,7 +11,11 @@ footer {
     font-size: 16px;
     justify-content: space-between;
     height: 50px;
-    @include padding(all);
+    @include padding(all, large);
+
+    @include respond-to('phone') {
+        @include padding(all, default);
+    }
 
     div {
         font-weight: 500;
@@ -17,6 +25,9 @@ footer {
         font-weight: 600;
         color: unset;
         text-decoration: none;
+
+        @include margin(left, small);
+        @include margin(right, small);
 
         &:hover {
             color: $color-primary-blue;
@@ -30,8 +41,11 @@ footer {
         }
     }
 
-    a:nth-child(1) {
-        @include padding(left, small);
-        padding-right: 25px; // TODO: fetch from a variable, paddings/margins should be defined
+    i {
+        filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(188deg) brightness(92%) contrast(92%);
+
+        &:hover {
+            filter: invert(24%) sepia(91%) saturate(5893%) hue-rotate(212deg) brightness(101%) contrast(94%);
+        }
     }
 }

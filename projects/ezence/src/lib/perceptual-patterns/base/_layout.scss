@@ -2,6 +2,7 @@
 
 @import 'reset';
 @import 'spacing';
+@import 'responsive';
 @import '../color-scheme';
 @import '../iconography';
 @import '../typography';
@@ -28,6 +29,10 @@ article {
 
     @include margin(all, large);
 
+    @include respond-to('phone') {
+        @include margin(all, small);
+    }
+
     header {
         color: $color-primary-blue;
         @include margin(bottom, small);
@@ -42,11 +47,35 @@ header {
 }
 
 main {
+    display: flex;
     flex: 1 0 auto; // <- TODO: Just for sticky footer
+    flex-direction: column;
     @include margin(all, large);
+
+    @include respond-to('phone') {
+        @include margin(all, default);
+    }
 }
 
-footer {
-    flex-shrink: 0;
-    @include padding(large);
+
+@mixin flex($direction: column) {
+    display: flex;
+
+    @if $direction == column {
+        flex-direction: column;
+    } @else if $direction == row {
+        flex-direction: row;
+    } @else {
+        flex-direction: column; // TODO: by default it should be row
+    }
+}
+
+.flex {
+    @include flex;
+    &-row {
+        @include flex(row);
+    }
+    &-column {
+        @include flex(column);
+    }
 }

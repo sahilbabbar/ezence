@@ -9,6 +9,14 @@
         "ezence": {
             "projectType": "library",
             "root": "projects/ezence",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                },
+                "@schematics/angular:application": {
+                    "strict": true
+                }
+            },
             "sourceRoot": "projects/ezence/src",
             "prefix": "ez",
             "architect": {
@@ -32,7 +40,10 @@
                     "options": {
                         "main": "projects/ezence/src/test.ts",
                         "tsConfig": "projects/ezence/tsconfig.spec.json",
-                        "karmaConfig": "projects/ezence/karma.conf.js"
+                        "karmaConfig": "projects/ezence/karma.conf.js",
+                        "assets": [
+                            "projects/ezence/src/lib/perceptual-patterns/iconography/icons"
+                        ]
                     }
                 },
                 "lint": {

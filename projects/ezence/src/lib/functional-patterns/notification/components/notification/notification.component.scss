@@ -1,0 +1,25 @@
+@import '../../../../perceptual-patterns/base/index';
+
+.ez-notification {
+    &-default {
+        background: $color-primary-blue;
+        border: 1px solid $color-primary-blue;
+        color: $color-primary-white;
+        top: 1vh;
+        display: flex;
+        flex-direction: column;
+        left: calc((100vw - 90vw)/2);
+        max-width: 90vw;
+        right: calc((100vw - 90vw)/2);
+        position: fixed;
+        width: fit-content;
+        z-index: 99;
+
+        @include border-radius;
+        @include padding(all, default);
+    }
+
+    &-hidden {
+        display: none;
+    }
+}
