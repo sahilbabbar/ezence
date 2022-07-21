@@ -7,7 +7,7 @@ import {
 
 @Component({
     // <-- Shouldn't this be a directive?
-    selector: 'button[ez-button]',
+    selector: 'button[ez-button]', // eslint-disable-line
     templateUrl: './button.component.html',
     styleUrls: ['./button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,

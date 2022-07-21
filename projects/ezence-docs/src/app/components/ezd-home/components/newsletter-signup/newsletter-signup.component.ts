@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './newsletter-signup.component.html',
     styleUrls: ['./newsletter-signup.component.scss']
 })
-export class EzdNewsletterSignup {}
+export class EzdNewsletterSignupComponent {}
