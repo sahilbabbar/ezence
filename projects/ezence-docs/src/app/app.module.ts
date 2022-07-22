@@ -9,6 +9,7 @@ import { EzenceModule } from '../../../ezence/src/lib/ezence.module';
 import { EzdFunctionalPatternsComponent } from './components/ezd-functional-patterns/ezd-functional-patterns.component';
 import { EzdPerceptualPatternsComponent } from './components/ezd-perceptual-patterns/ezd-perceptual-patterns.component';
 import { EzdNewsletterSignupComponent } from './components/ezd-home/components/newsletter-signup/newsletter-signup.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,7 @@ import { EzdNewsletterSignupComponent } from './components/ezd-home/components/n
         EzdPerceptualPatternsComponent
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, EzenceModule],
-    providers: [],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
