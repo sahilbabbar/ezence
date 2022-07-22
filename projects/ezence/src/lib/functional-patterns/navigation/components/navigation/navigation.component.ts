@@ -14,7 +14,8 @@ import { EzNavigation } from '../../models/navigation.model';
 })
 export class EzNavigationComponent implements AfterViewInit {
     // TODO: Rename to NavBarComponent
-    @Input() data!: EzNavigation;
+
+    @Input() data!: EzNavigation; // TODO: data remains undefined when template loads
 
     @ViewChild('navLinks') navLinks!: ElementRef;
 
