@@ -1,16 +1,15 @@
 <nav>
     <div class='ez-nav-brand' #navBrand>
-        <a *ngIf='data.brand.image else navLabel' [href]='data.brand.href'>
+        <a *ngIf='data.brand.image else navLabel' [routerLink]='data.brand.href'>
             <img [src]='data.brand.image' [alt]='data.brand.label'>
         </a>
         <ng-template #navLabel>
-            <a [href]='data.brand.href'>{{ data.brand.label }}</a>
+            <a [routerLink]='data.brand.href'>{{ data.brand.label }}</a>
         </ng-template>
-
     </div>
     <div class='ez-nav-links' #navLinks>
         <ng-container *ngFor='let link of data.links'>
-            <a [href]='link.href'>{{ link.label }}</a>
+            <a [routerLink]='link.href'>{{ link.label }}</a>
         </ng-container>
     </div>
     <button ez-button *ngIf='responsive' (click)='toggleLinksMenu()'>
@@ -20,6 +19,6 @@
 
 <div class='ez-nav-links-menu' *ngIf='showLinksMenu'> <!-- TODO: why does [hidden] not work here-->
     <ng-container *ngFor='let link of data.links'>
-        <a [href]='link.href'>{{ link.label }}</a>
+        <a [routerLink]='link.href'>{{ link.label }}</a>
     </ng-container>
 </div>

@@ -18,8 +18,13 @@ const routes: Routes = [
         component: EzdPerceptualPatternsComponent
     },
     {
+        path: '',
+        redirectTo: '/',
+        pathMatch: 'full'
+    },
+    {
         path: '**',
-        component: EzdHomeComponent
+        redirectTo: '/'
     }
 ];
 

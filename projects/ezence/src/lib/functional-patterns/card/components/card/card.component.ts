@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EzCard } from '../../models/card.model';
 
 @Component({
@@ -6,10 +6,6 @@ import { EzCard } from '../../models/card.model';
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss']
 })
-export class EzCardComponent implements OnInit {
+export class EzCardComponent {
     @Input() data!: EzCard;
-
-    constructor() {}
-
-    ngOnInit(): void {}
 }
