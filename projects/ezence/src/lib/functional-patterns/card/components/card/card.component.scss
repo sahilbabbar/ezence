@@ -5,8 +5,9 @@
     box-shadow: 0px 0px 5px $color-variant-black-2;
     display: flex;
     flex-direction: column;
-    padding: 20px; // TODO: use from reusable static paddings and below margins
     max-width: 50vw;
+    padding: 20px; // TODO: use from reusable static paddings and below margins
+    transition: border-color 0.5s, box-shadow 0.5s;
     @include border-radius;
 
     @include respond-to('phone') {
@@ -31,5 +32,11 @@
         }
 
         flex-direction: row;
+    }
+
+    &:hover {
+        border-color: $color-primary-black;
+        box-shadow: none;
+        cursor: pointer;
     }
 }

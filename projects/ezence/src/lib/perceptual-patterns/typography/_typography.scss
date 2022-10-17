@@ -75,12 +75,15 @@ p {
 }
 
 a {
+    align-items: center;
     color: $color-primary-blue;
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
 
-    //&:hover { // TODO: add hover effect for anchor, if required
-    //    border-bottom: 1px dashed $color-variant-black-1;
-    //}
+    &:hover { // TODO: add hover effect for anchor, if required
+        cursor: pointer;
+    }
 }
 
 /// Reusable classes

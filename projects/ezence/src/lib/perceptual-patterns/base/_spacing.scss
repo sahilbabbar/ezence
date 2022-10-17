@@ -6,6 +6,7 @@
     --space-small: calc(0.75 * var(--space-unit));
     --space-default: calc(1.25 * var(--space-unit));
     --space-large: calc(2 * var(--space-unit));
+    --space-xlarge: calc(10 * var(--space-unit));
 }
 
 // Margins
@@ -75,6 +76,9 @@
         &-large {
             margin-top: var(--space-large);
         }
+        &-xlarge {
+            margin-top: var(--space-xlarge);
+        }
     }
     &-right {
         &-default {
@@ -97,7 +101,9 @@
         &-large {
             margin-bottom: var(--space-large);
         }
-
+        &-xlarge {
+            margin-bottom: var(--space-xlarge);
+        }
     }
 }
 
